@@ -1,1 +1,35 @@
  <!-- 1ª Digitação (Resolva aqui o exercício) -->
+  <!DOCTYPE html>
+  <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de cliques!</title>
+    <style>
+        .fundo {
+            background-color: lightgreen;
+        }
+
+        .fundo-ativo{
+            background-color: red;
+        }
+    </style>
+  </head>
+  <body class="fundo" id="fundo">
+    <button id="button"> Clique em mim! </button>
+    <p id="contador"></p>
+    
+    <script>
+        const button = document.querySelector('#button');
+        const contador = document.querySelector('#contador');
+        const fundo = document.querySelector('#fundo');
+
+        button.addEventListener('click', () => {
+        let contagem = 0;
+        contagem += 1
+
+        contador.innerHTML = "Contagem: " + contagem;
+        })
+    </script>
+  </body>
+  </html>

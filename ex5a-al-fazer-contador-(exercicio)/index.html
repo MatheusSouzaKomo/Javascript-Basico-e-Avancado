@@ -24,12 +24,18 @@
         const contador = document.querySelector('#contador');
         const fundo = document.querySelector('#fundo');
 
-        button.addEventListener('click', () => {
         let contagem = 0;
-        contagem += 1
 
-        contador.innerHTML = "Contagem: " + contagem;
-        })
+        button.addEventListener('click', () => {
+          contagem = contagem + 1;
+          contador.innerHTML = "Contagem: " + contagem;
+
+          if (contagem % 2 != 0) {
+            fundo.classList.add("fundo-ativo")
+          } else {
+            fundo.classList.remove("fundo-ativo")
+          }
+        });
     </script>
   </body>
   </html>

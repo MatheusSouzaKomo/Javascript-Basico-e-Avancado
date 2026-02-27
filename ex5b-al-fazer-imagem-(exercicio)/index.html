@@ -67,7 +67,21 @@
 
   <!-- Script JavaScript embutido na página -->
   <script>
+    const texto = document.querySelector("#myText");
+    const imagem = document.querySelector("#myImage");
+    const texto2 = document.querySelector("#subText");
 
+    imagem.addEventListener('mouseenter', () => {
+      imagem.src= "image2.png"
+      texto.textContent = "Doja Cat, lota shows com sua bela voz."
+      texto2.textContent = "Doja Cat - Perfeita!"
+    })
+
+    imagem.addEventListener('mouseleave', () => {
+      imagem.src="image.png"
+      texto.textContent = "Passe o mouse sobre a imagem"
+      texto2.textContent = "Sabrina Carpenter - Linda!"
+    })
 
     // 1ª Digitação (Resolva aqui o exercício)
 
